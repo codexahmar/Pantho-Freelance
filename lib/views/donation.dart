@@ -20,7 +20,7 @@ class _DonationState extends State<Donation> {
     ScreenUtil.init(context);
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(400),
+        preferredSize: Size.fromHeight(350),
         child: AppBar(
           title: Text(
             AppTexts.donationType,
@@ -65,56 +65,68 @@ class _DonationState extends State<Donation> {
           ),
         ),
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Column(
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      DonationCard(
-                        title: "Blood",
-                        description:
-                            "Do you want to make\n your contact number\n visible for other",
-                        imageAsset: Assets.assetsIconsDrop,
-                      ),
-                      DonationCard(
-                        title: "Powder Red",
-                        description:
-                            "Do you want to make\n your contact number\n visible for other",
-                        imageAsset: Assets.assetsIconsDrop,
-                      ),
-                    ],
-                  ),
-                  SizedBox(height: 20.h),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      DonationCard(
-                        title: "Platelets",
-                        description:
-                            "Do you want to make\n your contact number\n visible for other",
-                        imageAsset: Assets.assetsIconsDrop,
-                      ),
-                      DonationCard(
-                        title: "AB Plasma",
-                        description:
-                            "Do you want to make\n your contact number\n visible for other",
-                        imageAsset: Assets.assetsIconsDrop,
-                      ),
-                    ],
-                  ),
-                  SizedBox(height: 30.h),
-                  CustomButton(onTap: () {}, title: "Next"),
-                  SizedBox(height: 30.h),
-                ],
-              ),
+      body: Column(
+        children: [
+          Padding(
+            padding: EdgeInsets.symmetric(
+              horizontal: 16.w,
             ),
-          ],
-        ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        DonationCard(
+                          title: "Blood",
+                          description:
+                              "Do you want to make\n your contact number\n visible for other",
+                          imageAsset: Assets.assetsIconsDrop,
+                        ),
+                        DonationCard(
+                          title: "Powder Red",
+                          description:
+                              "Do you want to make\n your contact number\n visible for other",
+                          imageAsset: Assets.assetsIconsDrop,
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 20.h),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        DonationCard(
+                          title: "Platelets",
+                          description:
+                              "Do you want to make\n your contact number\n visible for other",
+                          imageAsset: Assets.assetsIconsDrop,
+                        ),
+                        DonationCard(
+                          title: "AB Plasma",
+                          description:
+                              "Do you want to make\n your contact number\n visible for other",
+                          imageAsset: Assets.assetsIconsDrop,
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: 20.h,
+                ),
+                Padding(
+                  padding: EdgeInsets.symmetric(vertical: 0.h),
+                  child: CustomButton(
+                    onTap: () {},
+                    title: "Next",
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }

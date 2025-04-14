@@ -23,7 +23,7 @@ class _BecomeDonorState extends State<BecomeDonor> {
         title: Text(
           AppTexts.becomeDonor,
           style: robotoMediumStyle.copyWith(
-            fontSize: 24.sp,
+            fontSize: 20.sp, // Reduced font size
             color: AppColors.dark,
             fontWeight: FontWeight.w400,
           ),
@@ -38,116 +38,106 @@ class _BecomeDonorState extends State<BecomeDonor> {
             Assets.assetsIconsMenuLeft,
             scale: 4,
           ),
-          SizedBox(
-            width: 17.w, // Use ScreenUtil for responsive width
-          ),
+          SizedBox(width: 10.w),
         ],
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(16.0),
+          padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 8.h),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Image.asset(Assets.assetsImagesDonor),
+              // Donor image with reduced size
               SizedBox(
-                height: 20.h,
+                height: 150.h, // Limit image height
+                width: double.infinity,
+                child: Image.asset(
+                  Assets.assetsImagesDonor,
+                  fit: BoxFit.contain,
+                ),
               ),
+              SizedBox(height: 10.h),
               InfoTile(
                 title: "Name",
                 subtitle: "Ahmad Dias",
                 assetImage: Assets.assetsIconsProfileIcon,
                 imageColor: AppColors.primary,
-                imageHeight: 20.h,
+                imageHeight: 18.h,
               ),
-              SizedBox(
-                height: 20.h,
-              ),
+              SizedBox(height: 10.h),
               InfoTile(
                 title: "Email",
                 subtitle: "demo@gmail.com",
                 assetImage: Assets.assetsIconsMail,
-                imageHeight: 15.h,
+                imageHeight: 13.h,
               ),
-              SizedBox(
-                height: 28.h,
-              ),
+              SizedBox(height: 15.h),
               Text(
                 "Select Blood Group",
                 style: robotoMediumStyle.copyWith(
-                  fontSize: 24.sp, // Use ScreenUtil for responsive font size
+                  fontSize: 20.sp,
                   color: AppColors.dark,
                   fontWeight: FontWeight.w400,
                 ),
               ),
-              SizedBox(
-                height: 20.h, // Use ScreenUtil for responsive height
-              ),
-              Column(
+              SizedBox(height: 10.h),
+              GridView.count(
+                crossAxisCount: 4,
+                mainAxisSpacing: 8.h,
+                crossAxisSpacing: 8.w,
+                shrinkWrap: true,
+                physics: NeverScrollableScrollPhysics(),
+                childAspectRatio: 1.1, 
                 children: [
-                  GridView.count(
-                    crossAxisCount: 4,
-                    mainAxisSpacing: 10.h,
-                    crossAxisSpacing: 10.w,
-                    shrinkWrap: true,
-                    physics: NeverScrollableScrollPhysics(),
-                    children: [
-                      BloodGroupContainer(bloodGroup: "AB+"),
-                      BloodGroupContainer(bloodGroup: "A+"),
-                      BloodGroupContainer(bloodGroup: "A-"),
-                      BloodGroupContainer(bloodGroup: "B+"),
-                    ],
+                  BloodGroupContainer(bloodGroup: "AB+"),
+                  BloodGroupContainer(bloodGroup: "A+"),
+                  BloodGroupContainer(bloodGroup: "A-"),
+                  BloodGroupContainer(bloodGroup: "B+"),
+                ],
+              ),
+              SizedBox(height: 15.h),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Container(
+                    width: 14.w,
+                    height: 14.h,
+                    decoration: BoxDecoration(
+                      border: Border.all(color: Color(0xFF00C94A)),
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: Image.asset(
+                      Assets.assetsIconsCheck,
+                      scale: 3,
+                    ),
                   ),
-                  SizedBox(
-                    height: 30.h,
-                  ),
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Container(
-                          width: 16.w,
-                          height: 16.h,
-                          decoration: BoxDecoration(
-                            border: Border.all(color: Color(0xFF00C94A)),
-                            borderRadius: BorderRadius.circular(20),
-                          ),
-                          child: Image.asset(
-                            Assets.assetsIconsCheck,
-                            scale: 3,
-                          )),
-                      SizedBox(
-                          width: 10.w), // Use ScreenUtil for responsive width
-                      Flexible(
-                        child: Text(
-                          "Do you want to make your contact number visible for other",
-                          style: robotoMediumStyle.copyWith(
-                            fontSize: 12.sp,
-                            color: AppColors.dark,
-                            fontWeight: FontWeight.w400,
-                          ),
-                          overflow: TextOverflow.visible,
-                        ),
+                  SizedBox(width: 8.w),
+                  Flexible(
+                    child: Text(
+                      "Do you want to make your contact number visible for other",
+                      style: robotoMediumStyle.copyWith(
+                        fontSize: 11.sp,
+                        color: AppColors.dark,
+                        fontWeight: FontWeight.w400,
                       ),
-                    ],
-                  ),
-                  SizedBox(
-                    height: 40.h,
-                  ),
-                  CustomButton(onTap: () {}, title: "Submit"),
-                  SizedBox(
-                    height: 40.h,
-                  ),
-                  Text(
-                    "Read more who can give blood",
-                    style: robotoMediumStyle.copyWith(
-                      fontSize:
-                          14.sp, // Use ScreenUtil for responsive font size
-                      color: AppColors.primary,
-                      fontWeight: FontWeight.w400,
                     ),
                   ),
                 ],
               ),
+              SizedBox(height: 20.h),
+              CustomButton(onTap: () {}, title: "Submit"),
+              SizedBox(height: 15.h),
+              Center(
+                child: Text(
+                  "Read more who can give blood",
+                  style: robotoMediumStyle.copyWith(
+                    fontSize: 12.sp,
+                    color: AppColors.primary,
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
+              ),
+              SizedBox(height: 10.h),
             ],
           ),
         ),
