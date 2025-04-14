@@ -61,10 +61,7 @@ lib/
 
    ```bash
    # Clone the repository
-   git clone https://github.com/yourusername/pantho.git
-
-   # Navigate to project directory
-   cd pantho
+   git clone https://github.com/yourusername/pantho.git](https://github.com/codexahmar/Pantho-Freelance.git
 
    # Install dependencies
    flutter pub get
