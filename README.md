@@ -70,7 +70,7 @@ lib/
 
    ```bash
    # Clone the repository
-   git clone https://github.com/yourusername/pantho.git](https://github.com/codexahmar/Pantho-Freelance.git
+   git clone https://github.com/codexahmar/Pantho-Freelance
 
    # Install dependencies
    flutter pub get
