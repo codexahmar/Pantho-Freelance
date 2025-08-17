@@ -1,43 +1,52 @@
-# Pantho - Blood Donation App
+# Pantho - Blood Donation App 🩸📱
 
-A modern blood donation application built with Flutter that connects blood donors with those in need. The app features a clean and intuitive user interface with a focus on user experience.
+**Pantho** is a modern blood donation application built with **Flutter** that connects blood donors with those in need.  
+The app features a **clean and intuitive user interface** with a strong focus on user experience.
 
-## Features
+---
 
-- **Onboarding Experience**: Smooth onboarding process for new users
-- **Donor Registration**: Easy registration process for blood donors
-- **Multiple Donation Types**: Support for various donation types:
+## 🌟 Features
+
+- **Onboarding Experience** – Smooth onboarding process for new users  
+- **Donor Registration** – Easy registration process for blood donors  
+- **Multiple Donation Types**:
   - Whole Blood
   - Plasma
   - Platelets
   - Powder Red Blood Cells
-- **Blood Group Selection**: Simple interface for selecting blood groups
-- **Profile Management**: User profile management with personal information
-- **Contact Visibility Options**: Control over contact information visibility
+- **Blood Group Selection** – Simple interface for selecting blood groups  
+- **Profile Management** – Manage user profiles and personal information  
+- **Contact Visibility Options** – Control over which contact information is visible  
 
-## Screenshots
+---
 
-Here are some screenshots of the application:
+## 📸 Screenshots
 
 | Onboarding                                         | Sign In                                        | Home                                         |
 | -------------------------------------------------- | ---------------------------------------------- | -------------------------------------------- |
 | <img src="Screenshots/onboarding.png" width="250"> | <img src="Screenshots/signin.png" width="250"> | <img src="Screenshots/home.png" width="250"> |
 
-| Become Donor                                         | Donation Type                                         | Profile                                         |
-| ---------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------- |
+| Become Donor                                       | Donation Type                                 | Profile                                      |
+| -------------------------------------------------- | --------------------------------------------- | -------------------------------------------- |
 | <img src="Screenshots/become-donor.png" width="250"> | <img src="Screenshots/donation-type.png" width="250"> | <img src="Screenshots/profile.png" width="250"> |
 
-## Technology Stack
+---
 
-- **Framework**: Flutter
-- **State Management**: GetX
-- **Architecture**: Clean Architecture
-- **UI Components**: Custom widgets for reusability
-- **Responsive Design**: flutter_screenutil for adaptive UI
-- **Charts**: syncfusion_flutter_charts for data visualization
-- **UI Navigation**: Multi-step forms using another_stepper
+## 🛠️ Technology Stack
 
-## Project Structure
+- **Framework**: Flutter  
+- **State Management**: GetX  
+- **Architecture**: Clean Architecture  
+- **UI Components**: Custom widgets for reusability  
+- **Responsive Design**: `flutter_screenutil` for adaptive UI  
+- **Charts & Data Visualization**: `syncfusion_flutter_charts`  
+- **UI Navigation**: Multi-step forms using `another_stepper`  
+
+---
+
+## 📂 Project Structure
+
+
 
 ```
 lib/
